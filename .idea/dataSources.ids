@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails gamecrunch2: development" uuid="6cd672fb-9c9f-45d4-ac2d-dd0d73eb075f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails gamecrunch2: test" uuid="e6eeec8e-6bc5-4b82-bc85-94069bb08207">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails gamecrunch2: production" uuid="940bbabc-d4e7-4a76-9977-8c4c6d421f52">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
