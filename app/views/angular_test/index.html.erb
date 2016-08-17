@@ -1,0 +1,49 @@
+<article ng-app="angular_test">
+  <header>
+    <h1 ng-if="name">Hello, {{name}}</h1>
+  </header>
+  <section>
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control"
+               name="name"
+               type="text"
+               placeholder="Enter your name"
+               autofocus
+               ng-model="name">
+      </div>
+    </form>
+  </section>
+</article>
+
+<div id="send-pin">
+  <h3>What's your phone number?</h3>
+  <%= form_for @phone_number, remote: true do |f| %>
+      <div class="form-group">
+        <%= f.text_field :phone_number %>
+      </div>
+      <%= f.submit "Send PIN", class: "btn btn-primary", id: 'send-pin-link' %>
+  <% end %>
+  <form accept-charset="UTF-8" action="/phone_number" class="phone_number" data-remote="true" id="phone_number" method="post">
+    ...
+  </form>
+
+
+
+
+</div>
+<div id="verify-pin">
+  <h3>Enter your PIN</h3>
+  <%= form_tag phone_numbers_verify_path, remote: true do |f| %>
+      <%= hidden_field_tag 'hidden_phone_number', '' %>
+      <div class="form-group">
+        <%= text_field_tag :pin2 %>
+      </div>
+      <%= submit_tag "Verify PIN", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div id="status-box" class="alert alert-success">
+  <p id="status-message">Status: Haven’t done anything yet</p>
+</div>

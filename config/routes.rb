@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'angular_test/index'
+
   resources :phone_numbers, only: [:new, :create]
   post 'phone_numbers/verify' => "phone_numbers#verify"
+  get 'phone_numbers/home' => "phone_numbers#home"
+
+  get "angular_test", to: "angular_test#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
