@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+  get '/signup', to: 'users#new'
+
   get 'angular_test/index'
 
+  
   resources :phone_numbers, only: [:new, :create]
   post 'phone_numbers/verify' => "phone_numbers#verify"
   get 'phone_numbers/home' => "phone_numbers#home"
