@@ -18,6 +18,8 @@ gem 'twilio-ruby', '~> 4.1.0'
 
 gem 'bower-rails'
 
+gem 'bootstrap-sass'
+
 gem 'bcrypt'
 
 # Use jquery as the JavaScript library
